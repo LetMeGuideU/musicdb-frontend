@@ -1,5 +1,10 @@
 /* main color #ff003a */
 /* * * * global * * * */
+
+:root {
+  --main-color: #ff003a;
+}
+
 @font-face {
   font-family: BebasNeue_Bold;
   src: url("./fonts/BebasNeue Bold.ttf");
@@ -31,4 +36,84 @@ a:hover {
 
 .music-navbar .profile img {
   width: 45px;
+}
+/*X* *X* navbar *X* *X*/
+
+/* * * * hero * * * */
+.hero {
+  background: linear-gradient(
+    360deg,
+    rgba(36, 0, 0, 0.8858893899356618) 0%,
+    rgba(119, 0, 22, 1) 38%,
+    rgba(132, 0, 25, 1) 44%,
+    rgba(255, 0, 58, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
+  padding: 6rem;
+  font-family: BebasNeue_Bold;
+}
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hero .hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero .hero-content h1 {
+  line-height: 0.95;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero .hero-content p {
+  line-height: 0.95;
+  font-size: 1.6rem;
+}
+.hero .hero-content a {
+  display: flex;
+  color: var(--main-color);
+  background-color: white;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.hero .albums {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 25px;
+  justify-content: center;
+}
+.hero .albums div {
+  border: 1px transparent solid;
+  border-image: linear-gradient(to right, black, white);
+  border-image-slice: 1;
+}
+.hero .albums div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 993px) {
+  .hero .albums {
+    line-height: 1;
+  }
+  .hero .container {
+    display: block;
+    text-align: center;
+  }
+  .hero .hero-content a {
+    margin: auto;
+  }
+  .hero .albums {
+    margin: auto;
+    margin-top: 3em;
+    grid-template-columns: repeat(auto-fit, 150px);
+  }
 }
