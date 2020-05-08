@@ -21,6 +21,9 @@
   font-family: BebasNeue_Light;
   src: url("./fonts/BebasNeue Light.ttf");
 }
+body {
+  font-family: BebasNeue;
+}
 a:hover {
   text-decoration: none;
 }
@@ -92,7 +95,7 @@ a:hover {
 }
 .hero .albums div {
   border: 1px transparent solid;
-  border-image: linear-gradient(to right, black, white);
+  border-image: linear-gradient(to right, gray, white);
   border-image-slice: 1;
 }
 .hero .albums div a {
@@ -117,3 +120,34 @@ a:hover {
     grid-template-columns: repeat(auto-fit, 150px);
   }
 }
+/*X* *X* HERO *X* *X*/
+
+/* * * * PRODUCE * * * */
+.produce {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+.produce h2 {
+  font-size: 3rem;
+  font-family: BebasNeue_Bold;
+}
+.produce p:first-of-type {
+  font-family: BebasNeue_Bold;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+.produce p:last-of-type {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.produce a {
+  color: var(--main-color);
+  background-image: url("./assists/logo\ white-01.png");
+  font-family: BebasNeue_Bold;
+}
+@media only screen and (max-width: 993px) {
+  .produce {
+    text-align: center;
+  }
+}
+/*X* *X* PRODUCE *X* *X*/
